@@ -57,7 +57,7 @@ class Header extends StatelessWidget {
         Container(
           padding: EdgeInsets.only(top: 10),
           child: Text(
-            ' INICIAR SESIÓN GITHUB',
+            'MY VIRTUAL BOOK',
             style: TextStyle(
                 fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
           ),
