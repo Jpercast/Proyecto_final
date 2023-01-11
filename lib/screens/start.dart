@@ -1,15 +1,17 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:formulario_presenta/main.dart';
 
-class start extends StatefulWidget {
+class Start extends StatefulWidget {
   @override
-  State<start> createState() => _startState();
+  State<Start> createState() => _StartState();
 }
 
-class _startState extends State<start> {
+class _StartState extends State<Start> {
   @override
   Widget build(BuildContext context) {
-    final String user = '@jesus';
+    final String user = '@Grupo5';
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 30),
