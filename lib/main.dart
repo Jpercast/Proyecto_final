@@ -1,16 +1,14 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:formulario_presenta/screens/login_screen.dart';
-import 'package:formulario_presenta/screens/register_screen.dart';
-import 'package:formulario_presenta/screens/start.dart';
-import 'package:formulario_presenta/services/auth_services.dart';
+import 'package:formulario_presenta/services/push_notification.dart';
 import 'package:provider/provider.dart';
+import 'screens/screens.dart';
+import 'services/auth_services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await PushNotificacionService.initializeApp();
   runApp(MyApp());
 }
 
@@ -31,10 +29,10 @@ class MyApp extends StatelessWidget {
         title: 'Material App',
         initialRoute: '/',
         routes: {
+          // xd '/': (context) => Wrapper(),
           '/': (context) => LoginScreen(),
-          '/register_screen': (context) => FormRegistro(),
-          '/login_screen': (context) => Start(),
-          '/start': (context) => Start(),
+          '/register_screen': (context) => RegisterScreen(),
+          '/home_screen': (context) => BookSearchPage(),
         },
       ),
     );
